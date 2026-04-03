@@ -1,3 +1,4 @@
-name = "event"
-compatibility_date = "2024-04-01"
-pages_build_output_dir = ".next"
+name = "invitation"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"

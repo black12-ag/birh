@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import supabase from "@/lib/db";
 
 export const dynamic = 'force-dynamic';
+export const runtime = 'edge';
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
