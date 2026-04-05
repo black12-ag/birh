@@ -16,8 +16,6 @@ type WeddingScreenProps = {
 const WeddingScreen = ({ name }: WeddingScreenProps) => {
   const [fadeClass, setFadeClass] = useState("opacity-0");
   const [isOpen, setIsOpen] = useState(false);
-  const [playMusic, setPlayMusic] = useState(false);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeClass("opacity-100");
@@ -28,9 +26,6 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
-    if (!isOpen) {
-      setPlayMusic(true);
-    }
   };
 
   const { ref: mainRef, inView: isMainInView } = useInView({
@@ -555,14 +550,6 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
           </>
         )}
       </div>
-      {/* YouTube Background Music */}
-      {playMusic && (
-        <iframe
-          src="https://www.youtube.com/embed/-LRyC_909fM?autoplay=1&loop=1&playlist=-LRyC_909fM&controls=0"
-          allow="autoplay"
-          style={{ position: 'absolute', width: 0, height: 0, border: 0, opacity: 0, pointerEvents: 'none' }}
-        />
-      )}
     </div>
   );
 };
