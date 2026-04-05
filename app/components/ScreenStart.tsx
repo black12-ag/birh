@@ -39,9 +39,9 @@ const ScreenStart = () => {
     >
       <TypeAnimation
         sequence={[
-          "THE WEDDING OF",
-          2000, 
-          config.coupleNames.toUpperCase(),
+          "A STORY JUST FOR YOU",
+          2000,
+          "HAPPY BIRTHDAY, ASLA",
           1000,
         ]}
         wrapper="span"
@@ -50,8 +50,8 @@ const ScreenStart = () => {
           fontSize: "2em",
           display: "inline-block",
         }}
-        className="font-legan text-sm"
-        repeat={0} // Animasi terus diulang
+        className="font-legan text-sm text-center px-6"
+        repeat={0}
       />
     </div>
   );

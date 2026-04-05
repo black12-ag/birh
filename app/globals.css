@@ -56,10 +56,10 @@ body {
   background-image: url(../public/foto_2.jpg);
  }
  45% {
-  background-image: url(../public/foto_4.jpg);
+  background-image: url(../public/foto_3.jpg);
  }
   85% {
-    background-image: url(../public/foto_1.jpg);
+    background-image: url(../public/foto_4.jpg);
   }
   100% {
     background-image: url(../public/foto_2.jpg);
@@ -106,4 +106,24 @@ body {
 .active {
   opacity: 1;
   transform: translateY(0);
+}
+
+.slide-overlay {
+  position: relative;
+}
+.slide-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+  z-index: 0;
+  pointer-events: none;
+}
+.slide-overlay > * {
+  position: relative;
+  z-index: 1;
+}
+
+.txt-shadow {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.8);
 }

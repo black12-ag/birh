@@ -16,14 +16,14 @@ const Form = () => {
     const formData = new FormData(e.currentTarget);
     const data = {
       name: formData.get("name"),
-      attendance: formData.get("attendance"),
-      guests: formData.get("guests"),
+      attendance: "Attending",
+      guests: "1",
       message: formData.get("message"),
     };
 
 
-    if (!data.name || !data.attendance || !data.guests || !data.message) {
-      alert("All fields are required!");
+    if (!data.name || !data.message) {
+      alert("Please fill in your name and message!");
       setLoading(false); 
       return;
     }
@@ -61,46 +61,6 @@ const Form = () => {
           className="block w-full p-2 mt-1 bg-white/10 text-white border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           required
         />
-      </div>
-
-      <div>
-        <label
-          htmlFor="attendance"
-          className="block text-sm font-medium text-white"
-        >
-          Attendance
-        </label>
-        <select
-          id="attendance"
-          name="attendance"
-          className="block w-full p-2 mt-1 bg-black/40 text-white border border-gray-300 rounded-md shadow-sm  sm:text-sm"
-          required
-        >
-          <option value="">Select attendance</option>
-          <option value="Attending">Attending</option>
-          <option value="Not Attending">Not Attending</option>
-        </select>
-      </div>
-
-      <div>
-        <label
-          htmlFor="guests"
-          className="block text-sm font-medium text-white"
-        >
-          Number of Guests
-        </label>
-        <select
-          id="guests"
-          name="guests"
-          className="block w-full p-2 mt-1  bg-black/40 text-white border border-gray-300 rounded-md shadow-sm  sm:text-sm"
-          required
-        >
-          <option value="">Select number of guests</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
       </div>
 
       <div>
